@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  font-family: "DM Sans", sans-serif;
+  @apply text-gray-500;
+}
+
+/* Removemos overflow-x: hidden de .app para que no afecte el scroll */
+.app {
+  margin: 0;
+  padding: 0;
+}
+
+/* Nueva clase para ocultar desbordamiento horizontal sin interferir con el scroll de anclaje */
+.noHorizontalOverflow {
+  overflow-x: hidden;
+  overflow-y: visible; /* se permite el scroll vertical */
+  height: auto; /* se asegura que su altura se ajuste al contenido */
+  position: static; /* se evita que cree un contexto de scroll propio */
+}
+
+/* Global class to handle overflow issues */
+.noHorizontalOverflow {
+  overflow-x: hidden; /* Prevent horizontal overflow */
+  overflow-y: visible; /* Allow vertical scrolling */
+}
+
+@media (max-width: 973px) {
+  .fullWidthMobile {
+    width: 100vw; /* Ensure it spans the full viewport width */
+    overflow-x: hidden; /* Prevent horizontal overflow */
+  }
+
+  #root {
+    width: 100vw;
+  }
+}

@@ -1,0 +1,441 @@
+.bannerContainer {
+  background: url("../../assets/FondoBanner01.jpg") center / cover no-repeat;
+  color: white;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  z-index: 100;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+/* Add this to your global CSS or to the component */
+
+.imageWrapper {
+  position: absolute;
+  z-index: 10;
+  width: 40vw;
+  top: 10%;
+  right: 0;
+  bottom: 0;
+  left: 60%;
+  transform: scaleX(-1);
+  transform-origin: bottom center; /* Punto fijo en la parte inferior */
+  perspective: 1000px;
+  animation: wiperSweep 5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+}
+
+.imageWrapper img {
+  object-fit: cover;
+}
+
+@keyframes wiperSweep {
+  0% {
+    transform: scaleX(-1) rotate(-20deg) translateY(0);
+  }
+  10% {
+    transform: scaleX(-1) rotate(-18deg) translateY(2%);
+  }
+  20% {
+    transform: scaleX(-1) rotate(-12deg) translateY(4%);
+  }
+  30% {
+    transform: scaleX(-1) rotate(-5deg) translateY(1%);
+  }
+  40% {
+    transform: scaleX(-1) rotate(5deg) translateY(-3%);
+  }
+  50% {
+    transform: scaleX(-1) rotate(15deg) translateY(-5%);
+  }
+  60% {
+    transform: scaleX(-1) rotate(10deg) translateY(-2%);
+  }
+  70% {
+    transform: scaleX(-1) rotate(0deg) translateY(1%);
+  }
+  80% {
+    transform: scaleX(-1) rotate(-10deg) translateY(3%);
+  }
+  90% {
+    transform: scaleX(-1) rotate(-15deg) translateY(1%);
+  }
+  100% {
+    transform: scaleX(-1) rotate(-20deg) translateY(0);
+  }
+}
+
+.contentWrapper {
+  position: absolute;
+  z-index: 1;
+  margin: 0 auto;
+  top: 35.28%;
+  left: 11.875%;
+}
+
+.title {
+  font-size: 3.1rem;
+  font-weight: 700;
+  color: #3e4095;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  line-height: 3rem;
+}
+
+.subtitle {
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: #6aaffd;
+  margin-bottom: 2rem;
+  max-width: 830px;
+  line-height: 1.2;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.servicesButton {
+  background-color: #3e4095;
+  color: white;
+  border: none;
+  padding: 0.5rem 0.7rem;
+  border-radius: 7px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.servicesButton:hover {
+  background-color: #1d204e;
+  transform: scale(1.05);
+}
+
+.visitButton {
+  display: flex;
+  align-items: center;
+  gap: 0.2em;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #46a98a;
+  border: solid 2px #46a98a;
+  border-radius: 7px;
+  padding: 0.05rem 1rem;
+  padding-left: 0.6rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+  z-index: 1215;
+}
+
+.visitButton:hover {
+  background-color: #46a98a;
+  color: white;
+  transform: scale(1.05);
+}
+
+.visitButton img {
+  pointer-events: none;
+}
+
+.mapIcon {
+  width: 1.2rem;
+  height: 1.5rem;
+  font-size: 3.5rem;
+}
+
+/* Responsive styles */
+@media (max-width: 1366px) {
+  .contentWrapper {
+    position: absolute;
+    z-index: 1;
+    margin: 0 auto;
+    top: 25.28%;
+    left: 11.875%;
+    width: 40%;
+  }
+
+  .title {
+    font-size: 2.1rem;
+    font-weight: 700;
+    color: #3e4095;
+    margin-bottom: 1rem;
+    line-height: 2.2rem;
+  }
+
+  .subtitle {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #6aaffd;
+    margin-bottom: 1rem;
+    max-width: 830px;
+    line-height: 1.2;
+  }
+
+  .buttonContainer {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .servicesButton {
+    background-color: #3e4095;
+    color: white;
+    border: none;
+    padding: 0.5rem 0.7rem;
+    border-radius: 7px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+      background-color 0.3s ease,
+      transform 0.3s ease;
+  }
+
+  .servicesButton:hover {
+    background-color: #1d204e;
+    transform: scale(1.05);
+  }
+
+  .visitButton {
+    display: flex;
+    align-items: center;
+    gap: 0.2em;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #46a98a;
+    border: solid 2px #46a98a;
+    border-radius: 7px;
+    padding: 0.05rem 1rem;
+    padding-left: 0.6rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+      background-color 0.3s ease,
+      transform 0.3s ease;
+    z-index: 1215;
+  }
+
+  .servicesButton {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+    padding-top: 0.35rem;
+  }
+
+  .visitButton {
+    font-size: 0.7rem;
+    padding: 0.02rem 0.8rem;
+    padding-left: 0.6rem;
+  }
+
+  .visitButton:hover {
+    background-color: #46a98a;
+    color: white;
+    transform: scale(1.05);
+  }
+
+  .visitButton img {
+    pointer-events: none;
+  }
+
+  .mapIcon {
+    width: 1.2rem;
+    height: 1.5rem;
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 973px) {
+  .bannerContainer {
+    background: url("../../assets/FondoBanner01.jpg") center / cover no-repeat;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    z-index: 100;
+    padding: 4rem 1.5rem;
+    padding-bottom: 0;
+    width: 100%;
+    height: 69vh;
+  }
+
+  .contentWrapper {
+    text-align: left;
+    margin-top: 100px;
+    padding: 0;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1300;
+  }
+
+  .title {
+    font-size: 1.6rem;
+    line-height: 1.1;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .buttonContainer {
+    justify-content: center;
+    position: absolute;
+    top: 200%;
+    gap: 0.2rem; /* tightened gap between buttons */
+  }
+
+  .servicesButton {
+    font-size: 1rem;
+    padding: 0.2rem 0.5rem;
+    padding-top: 0.35rem;
+  }
+
+  .visitButton {
+    padding: 0.05rem 1rem;
+    padding-left: 0.6rem;
+    font-size: 1rem;
+  }
+
+  .imageWrapper {
+    position: absolute; /* Se cambia de relative a absolute */
+    width: 80%;
+    max-width: 300px;
+    margin: 2rem auto 0;
+    left: 40%;
+    order: -1;
+    top: 40%; /* Se ajusta el valor para hacerlo visible */
+    animation: wiperSweepSmall 5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite; /* Se usa animacion reducida */
+  }
+
+  /* Nueva keyframes para reducir el movimiento en el eje x */
+  @keyframes wiperSweepSmall {
+    0% {
+      transform: scaleX(-1) rotate(-10deg) translateY(0);
+    }
+    10% {
+      transform: scaleX(-1) rotate(-9deg) translateY(2%);
+    }
+    20% {
+      transform: scaleX(-1) rotate(-8deg) translateY(4%);
+    }
+    30% {
+      transform: scaleX(-1) rotate(-5deg) translateY(1%);
+    }
+    40% {
+      transform: scaleX(-1) rotate(-2deg) translateY(-3%);
+    }
+    50% {
+      transform: scaleX(-1) rotate(0deg) translateY(-5%);
+    }
+    60% {
+      transform: scaleX(-1) rotate(-2deg) translateY(-2%);
+    }
+    70% {
+      transform: scaleX(-1) rotate(-4deg) translateY(1%);
+    }
+    80% {
+      transform: scaleX(-1) rotate(-6deg) translateY(3%);
+    }
+    90% {
+      transform: scaleX(-1) rotate(-8deg) translateY(1%);
+    }
+    100% {
+      transform: scaleX(-1) rotate(-10deg) translateY(0);
+    }
+  }
+}
+
+@media (max-width: 510px) {
+  .imageWrapper {
+    position: absolute; /* Se cambia de relative a absolute */
+    width: 50%;
+    max-width: 300px;
+    margin: 2rem auto 0;
+    left: 44%;
+    order: -1;
+    top: 48%; /* Se ajusta el valor para hacerlo visible */
+    animation: wiperSweepSmall 5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite; /* Se usa animacion reducida */
+  }
+  .buttonContainer {
+    justify-content: center;
+    position: absolute;
+    top: 320%;
+    gap: 0.2rem; /* tightened gap between buttons */
+  }
+}
+
+@media (max-width: 460px) {
+  .contentWrapper {
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
+    margin-top: 100px;
+    padding: 0;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1300;
+  }
+
+  .imageWrapper {
+    top: 46%;
+  }
+
+  .title {
+    font-size: 1.4rem;
+    margin-top: 2rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+
+  .buttonContainer {
+    justify-content: center;
+    position: absolute;
+    top: 190%;
+  }
+
+  .servicesButton {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+    padding-top: 0.35rem;
+  }
+
+  .visitButton {
+    font-size: 0.7rem;
+    padding: 0.02rem 0.8rem;
+    padding-left: 0.6rem;
+  }
+}
+
+@media (max-width: 390px) {
+  .contentWrapper {
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
+    margin-top: 50px;
+    padding: 0;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1300;
+  }
+  .buttonContainer {
+    justify-content: center;
+    position: absolute;
+    top: 148%;
+    gap: 0.2rem; /* tightened gap between buttons */
+  }
+}

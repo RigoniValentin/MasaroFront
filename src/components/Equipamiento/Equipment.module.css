@@ -1,0 +1,341 @@
+.equipmentSection {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 150px;
+  height: 80vh;
+}
+
+.headerBadgeParent {
+  position: relative;
+  background-color: transparent;
+  width: 100%;
+  z-index: 200;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.headerBadge {
+  background: linear-gradient(90deg, #46a98a 35%, #4cbece 60%);
+  color: #fff;
+  padding: 10px 20px;
+  width: 30%;
+  height: 75px;
+  margin-top: 14px;
+  border-radius: 18px 0 0 18px;
+  margin-bottom: 20px;
+  z-index: 200;
+}
+
+.headerBadge h2 {
+  position: absolute;
+  margin: auto 0;
+  left: 73.125%;
+  font-size: 2.4rem;
+  font-weight: 715;
+  z-index: 99;
+}
+
+.headerTitle {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.contentContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0 11.875%;
+}
+
+.textContent {
+  flex: 1;
+  width: 50%;
+  margin-top: 50px;
+}
+
+.mainHeading {
+  color: #46aa8c;
+  font-size: 2.3rem;
+  font-weight: 1000;
+  margin-bottom: 30px;
+  line-height: 1;
+}
+
+.equipmentList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.equipmentItem {
+  display: inline-flex;
+  align-items: flex-start;
+  margin-bottom: 23px;
+  background: transparent;
+  padding: 5px 15px;
+  padding-right: 25px;
+  border: none;
+  animation: highlightCycleShort 18s infinite;
+}
+
+.arrow {
+  color: #46aa8c;
+  font-size: 1.9rem;
+  width: auto;
+  font-weight: bold;
+  margin: auto 0;
+  margin-right: 10px;
+  margin-left: 20px;
+  transform: rotate(90deg);
+}
+
+.itemText {
+  color: #3e4095;
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+.imageContainer {
+  flex: 0 0 40%;
+  display: flex;
+  width: auto;
+  justify-content: center;
+}
+
+.equipmentImage {
+  max-width: 50%;
+  height: auto;
+}
+
+.videoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  width: 400px;
+  height: 400px;
+  margin-right: 350px;
+}
+
+.equipmentVideo {
+  max-width: 95%;
+  border-radius: 15px;
+}
+
+@media (max-width: 1366px) {
+  .headerBadge {
+    height: 50px;
+  }
+
+  .headerBadge h2 {
+    position: absolute;
+    margin: auto 0;
+
+    font-size: 1.4rem;
+    font-weight: 715;
+    z-index: 99;
+  }
+
+  .contentContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 11.875%;
+  }
+
+  .textContent {
+    flex: 1;
+    width: 50%;
+    margin-top: 50px;
+  }
+
+  .mainHeading {
+    font-size: 1.3rem;
+  }
+
+  .equipmentItem {
+    margin-bottom: 23px;
+    padding: 5px 15px;
+    padding-right: 25px;
+  }
+
+  .arrow {
+    font-size: 0.9rem;
+    margin-right: 10px;
+    margin-left: 20px;
+  }
+
+  .itemText {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  .equipmentImage {
+    max-width: 50%;
+    height: auto;
+  }
+
+  .videoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 300px;
+    height: 300px;
+    margin-right: 350px;
+  }
+
+  .equipmentVideo {
+    max-width: 90%;
+    border-radius: 15px;
+  }
+}
+
+@media (max-width: 973px) {
+  .equipmentSection {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 150px;
+    height: 80vh;
+  }
+  .contentContainer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .textContent {
+    width: 90%;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .videoContainer {
+    width: 60%;
+    margin: 20px auto; /* centra horizontalmente */
+    height: auto; /* permite que el video se ajuste proporcionalmente */
+  }
+  .headerBadge {
+    width: 80%; /* se achica el ancho */
+    height: 50px; /* se reduce la altura */
+    padding: 5px 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .headerBadge {
+    background: transparent;
+  }
+
+  .headerBadge h2 {
+    left: 50vw;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, #46a98a 35%, #4cbece 60%);
+    font-size: 1.8rem;
+    font-size: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    padding: 4px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: 10px;
+  }
+
+  .mainHeading {
+    font-size: 1.8rem; /* se reduce el tamaño del encabezado */
+    margin-bottom: 20px;
+  }
+  .equipmentItem {
+    padding: 2px 6px; /* reducido proporcionalmente */
+  }
+  .arrow {
+    font-size: 1.2rem; /* reducido proporcionalmente */
+    margin-right: 4px;
+    margin-left: 8px;
+  }
+  .itemText {
+    font-size: 1.3rem; /* reducido proporcionalmente */
+  }
+}
+
+@media (max-width: 450px) {
+  .equipmentSection {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 100px;
+    height: 57vh;
+  }
+  .contentContainer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .textContent {
+    width: 90%;
+    text-align: center;
+    margin-top: 0px;
+  }
+  .videoContainer {
+    width: 40%;
+    margin: 20px auto; /* centra horizontalmente */
+    height: auto; /* permite que el video se ajuste proporcionalmente */
+  }
+  .headerBadge {
+    width: 80%; /* se achica el ancho */
+    height: 50px; /* se reduce la altura */
+    padding: 5px 10px;
+    margin-top: 10px;
+  }
+
+  .headerBadge {
+    background: transparent;
+  }
+
+  .headerBadge h2 {
+    left: 50vw;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, #46a98a 35%, #4cbece 60%);
+    font-size: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    padding: 4px;
+    border-radius: 10px;
+  }
+
+  .mainHeading {
+    font-size: 1rem; /* se reduce el tamaño del encabezado */
+    margin-bottom: 10px;
+  }
+  .equipmentItem {
+    margin-bottom: 10px; /* reducido proporcionalmente */
+  }
+  .arrow {
+    font-size: 0.7rem; /* reducido proporcionalmente */
+    margin-right: 4px;
+    margin-left: 8px;
+  }
+  .itemText {
+    font-size: 0.7rem; /* reducido proporcionalmente */
+  }
+}
+
+@media (max-width: 379px) {
+  .equipmentSection {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 20px;
+    height: 57vh;
+  }
+
+  .videoContainer {
+    width: 20%;
+    margin: 0px auto; /* centra horizontalmente */
+    height: auto; /* permite que el video se ajuste proporcionalmente */
+  }
+}

@@ -1,0 +1,1932 @@
+/* ============================= */
+/* 1. Base Styles (Pantallas grandes) */
+/* ============================= */
+
+.bottomContainer {
+  position: relative;
+  width: 100%;
+  color: white;
+  position: relative; /* Añadido para controlar el contenido hijo */
+  overflow: visible; /* Permite que la imagen sobresalga */
+  z-index: 300;
+}
+
+.backgroundImage {
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+}
+
+.serviceContainer {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  z-index: 200;
+  height: 100vh;
+  margin-top: 70px;
+  padding: 0 3.875%;
+}
+
+.headerBadgeParent {
+  position: relative;
+  background-color: transparent;
+  width: 100%;
+  z-index: 200;
+}
+
+.headerBadge {
+  background-color: white;
+  color: #3e4095;
+  display: inline-block;
+  padding: 10px 20px;
+  width: 22%;
+  height: 75px;
+  margin-top: 300px;
+  border-radius: 0 18px 18px 0;
+  z-index: 200;
+}
+
+.headerBadge h2 {
+  position: absolute;
+  margin: auto 0;
+  left: 11.875%;
+  font-size: 2.4rem;
+  font-weight: 715;
+  z-index: 99;
+}
+
+.galeryContainer {
+  position: absolute;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  z-index: 200;
+  height: 100vh;
+  top: 1550px;
+  padding: 0 3.875%;
+}
+
+.headerBadgeParentGalery {
+  position: relative;
+  background-color: transparent;
+  width: 100%;
+  z-index: 200;
+  text-align: center;
+}
+
+.headerBadgeGalery {
+  background: linear-gradient(130deg, #4cbece, #46a98a);
+  color: white;
+  display: inline-block;
+  padding-top: 10px;
+  width: 18%;
+  height: 75px;
+  border-radius: 18px 18px 18px 18px;
+  z-index: 200;
+}
+
+.headerBadgeGalery h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.4rem;
+  font-weight: 715;
+  z-index: 99;
+}
+
+.clientsContainer {
+  position: absolute;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  z-index: 200;
+  height: 50vh;
+  top: 2450px;
+  padding: 0 3.875%;
+}
+
+.headerBadgeParentClients {
+  position: relative;
+  background-color: transparent;
+  width: 100%;
+  z-index: 200;
+  text-align: center;
+}
+
+.headerBadgeClients {
+  background: linear-gradient(130deg, #4cbece, #46a98a);
+  color: white;
+  display: inline-block;
+  padding-top: 10px;
+  width: 25%;
+  height: 75px;
+  border-radius: 18px 18px 18px 18px;
+  z-index: 200;
+}
+
+.headerBadgeClients h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.4rem;
+  font-weight: 715;
+  z-index: 99;
+}
+
+.contactContainer {
+  position: absolute;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  z-index: 100;
+  height: 65vh;
+  top: 2900px;
+  padding: 0 3.875%;
+}
+
+.headerBadgeParentContact {
+  position: relative;
+  background-color: transparent;
+  width: 100%;
+  z-index: 200;
+  text-align: center;
+}
+
+.headerBadgeContact {
+  background: linear-gradient(130deg, #4cbece, #46a98a);
+  color: white;
+  display: inline-block;
+  padding-top: 10px;
+  width: 18%;
+  height: 75px;
+  border-radius: 18px 18px 18px 18px;
+  z-index: 200;
+}
+
+.headerBadgeContact h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.4rem;
+  font-weight: 715;
+  z-index: 99;
+}
+
+.sideText {
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  font-size: 3.5rem;
+  font-weight: 1000;
+  color: rgba(115, 190, 170, 0.5);
+  margin-right: 20px;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+}
+
+.sideTextAlternate {
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  font-size: 3.5rem;
+  font-weight: 1000;
+  color: rgba(115, 190, 170, 0.5);
+  margin-right: 20px;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+}
+
+.mobileServiceTitle {
+  position: relative;
+  display: block;
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 10px auto;
+  color: rgba(115, 190, 170, 0.9);
+  z-index: 1300;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 45px; /* Even spacing for both rows and columns */
+  transition: opacity 0.5s ease;
+}
+
+.gridAlternate {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+  gap: 45px; /* Even spacing for both rows and columns */
+  flex: 1;
+  transition: opacity 0.5s ease;
+  margin: 0 380px;
+}
+
+.card {
+  width: 377px !important;
+  height: 377px !important;
+  background-color: white;
+  border-radius: 10%;
+  overflow: hidden;
+  box-shadow: 10px 15px 8px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+  will-change: transform, opacity;
+}
+
+.cardFront,
+.cardBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.cardBack {
+  transform: rotateY(180deg);
+}
+
+.text {
+  color: #49aa91;
+  font-size: 1.9rem;
+  margin: 0;
+  font-weight: 400;
+  padding: 0 20px;
+  line-height: 2rem;
+}
+
+.card:hover {
+  transform: translateY(-5px) scale(1.15);
+  background-image: linear-gradient(to bottom, #4cbdcc, #47aa8f);
+  color: white;
+  z-index: 205;
+}
+.card:hover .text {
+  color: white;
+}
+
+.card:active {
+  transform: translateY(-5px) scale(1.05);
+  transition: transform 0.1s ease;
+}
+
+.imageContainer {
+  width: 347px;
+  height: 172px;
+  overflow: hidden;
+  margin: auto;
+  padding-top: 15px;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px 25px 0 0;
+}
+
+.content {
+  padding: 15px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.description {
+  margin: 8px 0 0 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.arrowIcon {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(115, 190, 170, 0.7);
+  cursor: pointer; /* Se agrega para indicar que es interactivo */
+}
+
+.arrowIcon img {
+  transition: transform 0.3s ease;
+}
+
+.arrowIcon:hover {
+  transform: translateY(-50%) scale(1.1);
+  transition: transform 0.2s ease;
+}
+.arrowIcon:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.rotated {
+  transform: rotate(180deg);
+}
+
+/* Actualización del contenedor del carousel */
+.carouselContainer {
+  position: relative;
+  width: 100%;
+  margin-top: 100px;
+  overflow: hidden; /* Asegura que se oculte el contenido extra */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Contenedor interno: mantiene las imágenes centradas */
+.carouselImages {
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s ease;
+}
+
+/* Actualización de las imágenes del carousel */
+.carouselImage {
+  width: 832px;
+  height: 578px;
+  object-fit: fill;
+  border-radius: 70px;
+  margin-right: 30px;
+}
+
+/* Botones del carousel posicionados de forma absoluta */
+.carouselButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-radius: 10px 10px 10px 10px;
+  font-size: 5rem;
+  cursor: pointer;
+  color: #3e4095;
+  user-select: none;
+  padding: 10px 20px;
+  z-index: 101;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.carouselButton:hover {
+  transform: translateY(-50%) scale(1.1);
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.carouselButton:active {
+  transform: translateY(-50%) scale(0.95);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Botón previo a la izquierda y siguiente a la derecha */
+.prev {
+  left: 10px;
+}
+.next {
+  right: 10px;
+}
+
+/* Ícono dentro de los botones */
+.buttonIcon {
+  width: 50px;
+  height: auto;
+}
+
+/* Rota el ícono del botón previo para que apunte hacia la izquierda */
+.prev .buttonIcon {
+  transform: rotate(180deg);
+}
+
+/* Nuevas clases para animación de transición con desplazamiento */
+.slideTransition .cardFront {
+  animation: slideOutRight 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+.slideTransition .cardBack {
+  animation: slideInLeft 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+/* Se mantienen las reglas previas para card y cardInnerTransition */
+.card {
+  width: 417px;
+  height: 417px;
+  background-color: white;
+  border-radius: 10%;
+  overflow: hidden;
+  box-shadow: 10px 15px 8px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+  perspective: 1000px;
+  will-change: transform, opacity;
+}
+
+/* Nuevos keyframes para animar la tarjeta completa */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Clase para aplicar la transición a la tarjeta completa */
+.slideTransition {
+  animation: slideInFromLeftSmooth 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  will-change: transform, opacity;
+}
+
+/* Se eliminan clases antiguas de flip/rotación */
+
+.hiddenTransition {
+  animation: slideOutDownSmooth 0.8s ease-out forwards;
+  will-change: transform, opacity;
+}
+
+@keyframes slideInFromLeftSmooth {
+  0% {
+    transform: translateX(-50%) scale(0.95);
+    opacity: 0;
+  }
+  60% {
+    transform: translateX(10%) scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutDownSmooth {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+}
+
+/* Reemplaza las animaciones anteriores con transiciones sencillas y profesionales */
+@keyframes cardSlideOut {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes cardSlideIn {
+  0% {
+    transform: translateX(-30%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Optimización de animaciones para mejorar el rendimiento */
+.gridWrapper {
+  will-change: transform, opacity;
+}
+
+@keyframes gridSlideOutRight {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(100%, 0, 0);
+    opacity: 0;
+  }
+}
+@keyframes gridSlideInFromLeft {
+  0% {
+    transform: translate3d(-100%, 0, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+@keyframes gridSlideOutLeft {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+    opacity: 0;
+  }
+}
+@keyframes gridSlideInFromRight {
+  0% {
+    transform: translate3d(100%, 0, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+/* Asimismo, optimizamos las animaciones de tarjetas, si se vuelven a utilizar */
+@keyframes cardSlideOut {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(100%, 0, 0);
+    opacity: 0;
+  }
+}
+@keyframes cardSlideIn {
+  0% {
+    transform: translate3d(-30%, 0, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+/* Agregamos will-change a las clases de animación para forzar la aceleración por GPU */
+.slideTransition {
+  will-change: transform, opacity;
+}
+.hiddenTransition {
+  will-change: transform, opacity;
+}
+
+/* Este contenedor envuelve al grid de tarjetas */
+.gridWrapper {
+  will-change: transform, opacity;
+}
+
+/* Animaciones para transición entre vistas de tarjetas */
+@keyframes gridSlideOutRight {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+@keyframes gridSlideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes gridSlideOutLeft {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+@keyframes gridSlideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.toAlternate {
+  animation: gridSlideOutRight 0.2s ease-in forwards;
+}
+.inFromLeft {
+  animation: gridSlideInFromLeft 0.2s ease-out forwards;
+}
+.toPrimary {
+  animation: gridSlideOutLeft 0.2s ease-in forwards;
+}
+.inFromRight {
+  animation: gridSlideInFromRight 0.2s ease-out forwards;
+}
+
+/* Las clases aplicadas dinámicamente en Bottom.tsx */
+.slideOutRight {
+  composes: toAlternate;
+}
+.slideInFromLeft {
+  composes: inFromLeft;
+}
+.slideOutLeft {
+  composes: toPrimary;
+}
+.slideInFromRight {
+  composes: inFromRight;
+}
+
+.clientCarouselContainer {
+  /* Contenedor del carousel: ocupa el ancho completo y oculta el overflow */
+  margin-top: 70px;
+  margin-bottom: 50px;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.clientCarouselTrack {
+  display: flex;
+  /* Se añade la animación continua */
+  animation: scrollClients 5s linear infinite;
+}
+
+.clientImage {
+  width: 200px;
+  height: 150px;
+  margin-right: 100px;
+}
+
+@keyframes scrollClients {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Nuevas clases para "Ver más" y lista de clientes */
+.moreClientsButton {
+  margin: 20px auto 0 auto; /* Centrado horizontalmente */
+  display: block; /* Convertir en bloque para aplicar margin auto */
+  padding: 10px 20px;
+  background: linear-gradient(130deg, #4cbece, #46a98a);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.moreClientsButton:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
+}
+.moreClientsButton:active {
+  transform: scale(0.95);
+}
+
+.moreClientsContainer {
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+  text-align: left;
+  width: 80%;
+}
+
+/* Nuevos estilos para las tarjetas de contacto */
+.contacCards {
+  display: flex;
+  justify-content: center;
+  gap: 33px;
+  margin-top: 100px;
+}
+
+/* Updated contact cards: reduced size proportionally */
+.contactCard {
+  background: white;
+  border-radius: 35px;
+  text-align: center;
+  width: 314px; /* reduced from 392px */
+  height: 263px; /* reduced from 329px */
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.contactCard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+.contactCard:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.contactLogo {
+  display: block;
+  width: 30%;
+  height: auto;
+  margin: 32px auto 24px auto; /* reduced top and bottom margins */
+}
+
+.contactText {
+  color: #46a98a;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.contactCard:nth-child(1) .contactLogo,
+.contactCard:nth-child(2) .contactLogo {
+  margin: 32px auto 40px auto; /* adjusted margins for first two cards */
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 5%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 300;
+  cursor: pointer;
+}
+
+.modalContent {
+  background: linear-gradient(to bottom, #4cbdcc, #46aa8d);
+  color: white;
+  border-radius: 60px;
+  max-width: 90%;
+  max-height: 70%;
+  overflow-y: auto;
+  position: relative;
+  cursor: default;
+  /* Hide scrollbar but keep scrolling enabled */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.modalContent::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.modalCloseButton {
+  /* Actualizado para que la "X" se mantenga fija del lado derecho */
+  position: sticky;
+  top: 40px;
+  left: 770px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+}
+
+.modalCloseButton:hover {
+  transform: rotate(10deg) scale(1.1);
+  transition: transform 0.2s ease;
+}
+.modalCloseButton:active {
+  transform: rotate(-10deg) scale(0.9);
+}
+
+.extraClientsContainer {
+  margin: 20px 60px;
+  height: 100%;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.extraClientsContainer::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.footer {
+  position: absolute;
+  justify-content: space-around;
+  align-items: center;
+  background: linear-gradient(to bottom right, #4cbecd, #47ac93);
+  color: white;
+  position: relative;
+  width: 100%;
+  z-index: 200;
+  height: 70vh;
+  top: 3300px;
+}
+
+.container {
+  max-width: 76%;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 30px;
+}
+
+.logoSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+.logoSubtitle {
+  font-size: 14px;
+}
+
+.tagline {
+  font-size: 1.3rem;
+  margin: 10px 0;
+}
+
+.contactInfo {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.linksSection h3,
+.socialSection h3 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.linksSection ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.linksSection li {
+  margin-bottom: 15px;
+}
+
+.linksSection a,
+.socialSection a {
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.2s;
+  font-size: 1.1rem;
+}
+
+.linksSection a:hover,
+.socialSection a:hover {
+  opacity: 0.8;
+}
+
+.socialItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.socialIcon {
+  margin-right: 10px;
+}
+
+.bottomBar {
+  text-align: center;
+  padding: 15px 0;
+  font-size: 1.1rem;
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.whatsappButton {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  z-index: 1400;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  animation: pulse 2s infinite;
+}
+.whatsappButton:hover {
+  /* Deshabilitamos la animación pulse para que se apliquen el transform y transition */
+  animation: none !important;
+  transform: scale(1.2);
+  transition: transform 0.3s ease;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pulseAnimation {
+  animation: pulse 2s infinite;
+}
+
+.whatsappIcon {
+  width: 90px;
+  height: 90px;
+  z-index: 300;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.scrollTopButton {
+  position: fixed;
+  bottom: 20px;
+  right: 45px;
+  width: 40px;
+  height: 40px;
+  background-color: black;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+.scrollTopButton:hover {
+  transform: scale(1.15);
+  transition: transform 0.3s ease;
+}
+
+/* ============================= */
+/* 2. Animaciones y Keyframes    */
+/* ============================= */
+
+@keyframes flipSlide {
+  0% {
+    transform: rotateY(0deg) translateX(0);
+    opacity: 1;
+  }
+  50% {
+    transform: rotateY(90deg) translateX(20px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: rotateY(180deg) translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutRight {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutDown {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeftSmooth {
+  0% {
+    transform: translateX(-50%) scale(0.95);
+    opacity: 0;
+  }
+  60% {
+    transform: translateX(10%) scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutDownSmooth {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+}
+
+@keyframes cardSlideOut {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes cardSlideIn {
+  0% {
+    transform: translateX(-30%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes gridSlideOutRight {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(100%, 0, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes gridSlideInFromLeft {
+  0% {
+    transform: translate3d(-100%, 0, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes gridSlideOutLeft {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes gridSlideInFromRight {
+  0% {
+    transform: translate3d(100%, 0, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+/* ============================= */
+/* 3. Media Queries             */
+/* ============================= */
+@media (max-width: 1366px) {
+  .serviceContainer span {
+    transform: none;
+    justify-content: center;
+    font-size: 1.9rem; /* Reduced font size for smaller screens */
+  }
+
+  .headerBadge {
+    height: 50px;
+  }
+
+  .headerBadge h2 {
+    font-size: 1.4rem;
+  }
+
+  .grid {
+    gap: 45px; /* Even spacing for both rows and columns */
+  }
+
+  .gridAlternate {
+    gap: 45px; /* Even spacing for both rows and columns */
+    margin: 0 380px;
+  }
+
+  .card {
+    width: 277px !important;
+    height: 277px !important;
+  }
+
+  .text {
+    color: #49aa91;
+    font-size: 1.3rem;
+    margin: 0;
+    font-weight: 400;
+    padding: 0 20px;
+    line-height: 2rem;
+  }
+
+  .imageContainer {
+    width: 247px;
+    height: 152px;
+  }
+
+  .image {
+    width: 100%;
+    height: 100%;
+  }
+
+  .content {
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .description {
+    margin: 8px 0 0 0;
+    font-size: 0.9rem;
+    color: #666;
+  }
+
+  .arrowIcon {
+    width: 50px;
+    height: 50px;
+  }
+
+  /* Galery */
+  .galeryContainer {
+    position: absolute;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    z-index: 200;
+    height: 100vh;
+    top: 1150px;
+    padding: 0 3.875%;
+  }
+
+  .headerBadgeGalery {
+    padding-top: 10px;
+    width: 13%;
+    height: 50px;
+  }
+
+  .headerBadgeGalery h2 {
+    font-size: 1.4rem;
+  }
+
+  .carouselContainer {
+    position: relative;
+    width: 100%;
+    margin-top: 50px;
+    overflow: hidden; /* Asegura que se oculte el contenido extra */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  /* Contenedor interno: mantiene las imágenes centradas */
+  .carouselImages {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease;
+  }
+
+  /* Actualización de las imágenes del carousel */
+  .carouselImage {
+    width: 375px;
+    height: 320px;
+    object-fit: fill;
+    border-radius: 50px;
+    margin-right: 30px;
+  }
+  /*clients*/
+
+  .clientsContainer {
+    top: 1650px;
+  }
+  .headerBadgeClients {
+    height: 50px;
+    width: 20%;
+  }
+
+  .headerBadgeClients h2 {
+    font-size: 1.4rem;
+  }
+
+  /*Contact*/
+  .contactContainer {
+    top: 2100px;
+  }
+  .headerBadgeContact {
+    height: 50px;
+    width: 13%;
+  }
+  .headerBadgeContact h2 {
+    font-size: 1.4rem;
+  }
+
+  /*footer*/
+  .footer {
+    width: 100vw;
+    z-index: 200;
+    height: 100vh;
+    top: 1900px;
+  }
+}
+
+@media (max-width: 973px) {
+  .footer {
+    position: absolute;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(to bottom right, #4cbecd, #47ac93);
+    color: white;
+    position: relative;
+    width: 100vw;
+    z-index: 200;
+    height: 100vh;
+    top: 1900px;
+  }
+
+  .bottomContainer {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .serviceContainer {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    z-index: 200;
+    height: 60vh;
+    margin-top: 30px;
+    padding: 0 3.875%;
+  }
+
+  .serviceContainer span {
+    transform: none;
+    justify-content: center;
+    font-size: 1.5rem; /* Reduced font size for smaller screens */
+  }
+
+  .headerBadge {
+    width: 80%; /* se achica el ancho */
+    height: 50px; /* se reduce la altura */
+    padding: 5px 10px;
+    margin-top: 120px;
+    background: transparent;
+  }
+
+  .headerBadge h2 {
+    left: 50vw;
+    transform: translateX(-50%);
+    background: #fff;
+    font-size: 1.8rem;
+    font-size: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    padding: 4px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: 10px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 25px; /* Even spacing for both rows and columns */
+    transition: opacity 0.5s ease;
+    padding: 0;
+  }
+
+  .gridAlternate {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    gap: 60px; /* Even spacing for both rows and columns */
+    flex: 1;
+    transition: opacity 0.5s ease;
+    margin: 0 380px;
+  }
+
+  .sideText {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    font-size: 5.5rem;
+    font-weight: 1000;
+    color: rgba(115, 190, 170, 0.5);
+    margin-right: 20px;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+  }
+
+  .sideTextAlternate {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    font-size: 4.1rem;
+    font-weight: 1000;
+    color: rgba(115, 190, 170, 0.5);
+    margin-right: 0px;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+  }
+
+  .desktopOnly {
+    display: none;
+  }
+
+  .arrowIcon {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(115, 190, 170, 0.7);
+    cursor: pointer; /* Se agrega para indicar que es interactivo */
+  }
+
+  .card {
+    width: 140px !important; /* Further reduced width */
+    height: 180px !important; /* Further reduced height */
+  }
+
+  .imageContainer {
+    width: 100%; /* Adjusted proportionally */
+    height: 90px; /* Adjusted proportionally */
+    padding: 0;
+    margin: 0;
+  }
+
+  .content {
+    padding: 0px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .image {
+    border-radius: 10px 10px 0 0; /* Adjusted border radius */
+  }
+
+  .text {
+    font-size: 1rem; /* Further reduced font size */
+    line-height: 0.9em; /* Adjusted line height */
+  }
+
+  .description {
+    font-size: 0.7rem; /* Further reduced font size */
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 30px 20px;
+    gap: 20px;
+  }
+
+  /* Galery */
+  .galeryContainer {
+    position: absolute;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    z-index: 200;
+    height: 50vh;
+    top: 900px;
+    padding: 0 3.875%;
+  }
+
+  .headerBadgeParentGalery {
+    position: relative;
+    background-color: transparent;
+    width: 100%;
+    z-index: 200;
+    text-align: center;
+  }
+
+  .headerBadgeGalery {
+    width: 80%; /* se achica el ancho */
+    height: 50px; /* se reduce la altura */
+    padding: 5px 10px;
+    margin-top: 0px;
+    background: transparent;
+  }
+
+  .headerBadgeGalery h2 {
+    left: 50vw;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, #46a98a 35%, #4cbece 60%);
+    font-size: 1.8rem;
+    font-size: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #680909;
+    padding: 4px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: 10px;
+  }
+
+  .carouselContainer {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    overflow: hidden; /* Asegura que se oculte el contenido extra */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  /* Contenedor interno: mantiene las imágenes centradas */
+  .carouselImages {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease;
+  }
+
+  /* Botones del carousel posicionados de forma absoluta */
+  .carouselButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    border-radius: 10px 10px 10px 10px;
+    font-size: 5rem;
+    cursor: pointer;
+    color: #3e4095;
+    user-select: none;
+    padding: 10px 20px;
+    z-index: 101;
+    transition:
+      transform 0.3s ease,
+      background-color 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+  .carouselButton:hover {
+    transform: translateY(-50%) scale(1.1);
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+  .carouselButton:active {
+    transform: translateY(-50%) scale(0.95);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Botón previo a la izquierda y siguiente a la derecha */
+  .prev {
+    left: 10px;
+  }
+  .next {
+    right: 10px;
+  }
+
+  /* Ícono dentro de los botones */
+  .buttonIcon {
+    width: 20px;
+    height: auto;
+  }
+
+  /* Rota el ícono del botón previo para que apunte hacia la izquierda */
+  .prev .buttonIcon {
+    transform: rotate(180deg);
+  }
+
+  .carouselImage {
+    width: 100% !important;
+    margin-right: 0 !important;
+    height: auto;
+    border-radius: 30px;
+  }
+
+  /* Clients */
+  .clientsContainer {
+    position: absolute;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    z-index: 200;
+    height: 50vh;
+    top: 1400px;
+    padding: 0 3.875%;
+  }
+
+  .headerBadgeParentClients {
+    position: relative;
+    background-color: transparent;
+    width: 100%;
+    z-index: 200;
+    text-align: center;
+  }
+
+  .headerBadgeClients {
+    width: 80%; /* se achica el ancho */
+    height: 50px; /* se reduce la altura */
+    padding: 5px 10px;
+    margin-top: 0px;
+    background: transparent;
+  }
+
+  .headerBadgeClients h2 {
+    left: 50vw;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, #46a98a 35%, #4cbece 60%);
+    font-size: 1.8rem;
+    font-size: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #680909;
+    padding: 4px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: 10px;
+  }
+
+  .clientCarouselContainer {
+    /* Reducir márgenes para pantallas pequeñas */
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+
+  .clientCarouselTrack {
+    display: flex;
+    /* Mantiene la animación continua */
+    animation: scrollClients 3s linear infinite;
+  }
+
+  .clientImage {
+    /* Reducir tamaño de las imágenes y espacio entre ellas */
+    width: 120px;
+    height: 90px;
+    margin-right: 20px;
+  }
+
+  .moreClientsButton {
+    /* Ajustar tamaño y márgenes para el botón "Ver más" */
+    margin: 15px auto 0;
+    padding: 5px 8px;
+    font-size: 1rem;
+    width: auto;
+    height: auto;
+  }
+
+  .moreClientsContainer {
+    /* Ajustar ancho, padding y altura máxima de la lista */
+    width: 90%;
+    max-height: 200px;
+    padding: 10px;
+  }
+
+  @keyframes scrollClientsMobile {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-600%);
+    }
+  }
+
+  .clientCarouselTrack {
+    /* Aplica la nueva animación para móviles */
+    animation: scrollClientsMobile 10s linear infinite;
+  }
+
+  /* Contacts */
+  .contactContainer {
+    position: absolute;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    z-index: 100;
+    height: 65vh;
+    top: 1700px;
+    padding: 0 3.875%;
+  }
+
+  .headerBadgeParentContact {
+    position: relative;
+    background-color: transparent;
+    width: 100%;
+    z-index: 200;
+    text-align: center;
+  }
+
+  .headerBadgeContact {
+    width: 80%; /* se achica el ancho */
+    height: 50px; /* se reduce la altura */
+    padding: 5px 10px;
+    margin-top: 0px;
+    background: transparent;
+  }
+
+  .headerBadgeContact h2 {
+    left: 50vw;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, #46a98a 35%, #4cbece 60%);
+    font-size: 1.8rem;
+    font-size: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #680909;
+    padding: 4px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: 10px;
+  }
+
+  .contacCards {
+    margin-top: 50px; /* Reducido para pantallas pequeñas */
+  }
+
+  .contactCard {
+    width: 100px !important; /* Achicar ancho para aproximar relaciones 1:1 */
+    height: 100px !important; /* Ajustar alto para relación similar */
+    font-size: 0.5rem;
+  }
+
+  .contactCard p {
+    font-size: 0rem; /* Ajustar tamaño de fuente para la tarjeta de contacto */
+  }
+}
+
+/* En pantallas mayores, se oculta el nuevo contenedor móvil */
+@media (min-width: 974px) {
+  .mobileServiceTitle {
+    display: none;
+    z-index: 1300;
+  }
+}
+
+@media (max-width: 460px) {
+  .footer {
+    position: absolute;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(to bottom right, #4cbecd, #47ac93);
+    color: white;
+    position: relative;
+    width: 100vw;
+    z-index: 200;
+    height: 110vh;
+    top: 1800px;
+  }
+  .container {
+    padding: 20px 10px;
+    gap: 15px;
+  }
+  .tagline,
+  .contactInfo,
+  .linksSection h3,
+  .socialSection h3,
+  .bottomBar,
+  .linksSection a,
+  .socialSection a {
+    font-size: 0.9rem;
+  }
+  .logo {
+    width: 150px;
+  }
+}
+
+@media (max-width: 400px) {
+  /* Services */
+  .serviceContainer {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    z-index: 200;
+    height: 60vh;
+    margin-top: 60px;
+    padding: 0 3.875%;
+  }
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 25px; /* Even spacing for both rows and columns */
+    transition: opacity 0.5s ease;
+    padding: 0;
+  }
+
+  .gridAlternate {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    gap: 60px; /* Even spacing for both rows and columns */
+    flex: 1;
+    transition: opacity 0.5s ease;
+    margin: 0 380px;
+  }
+
+  .sideText {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    font-size: 5.5rem;
+    font-weight: 1000;
+    color: rgba(115, 190, 170, 0.5);
+    margin-right: 20px;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+  }
+
+  .sideTextAlternate {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    font-size: 4.1rem;
+    font-weight: 1000;
+    color: rgba(115, 190, 170, 0.5);
+    margin-right: 0px;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+  }
+
+  .desktopOnly {
+    display: none;
+  }
+
+  .arrowIcon {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(115, 190, 170, 0.7);
+    cursor: pointer; /* Se agrega para indicar que es interactivo */
+  }
+
+  .card {
+    width: 110px !important; /* Further reduced width */
+    height: 150px !important; /* Further reduced height */
+  }
+
+  .imageContainer {
+    width: 100%; /* Adjusted proportionally */
+    height: 90px; /* Adjusted proportionally */
+    padding: 0;
+    margin: 0;
+  }
+
+  .content {
+    padding: 0px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .image {
+    border-radius: 10px 10px 0 0; /* Adjusted border radius */
+  }
+
+  .text {
+    padding: 0 auto;
+    font-size: 0.8rem; /* Further reduced font size */
+    line-height: 0.9em; /* Adjusted line height */
+  }
+
+  .description {
+    font-size: 0.7rem; /* Further reduced font size */
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 30px 20px;
+    gap: 20px;
+  }
+
+  /* Clients */
+  .headerBadgeClients h2 {
+    left: 50vw;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, #46a98a 35%, #4cbece 60%);
+    font-size: 0.8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #680909;
+    padding: 4px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 376px) {
+  .footer {
+    position: absolute;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(to bottom right, #4cbecd, #47ac93);
+    color: white;
+    position: relative;
+    width: 100vw;
+    z-index: 200;
+    height: 125vh;
+    top: 1800px;
+  }
+}
+@media (max-width: 365px) {
+  .footer {
+    position: absolute;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(to bottom right, #4cbecd, #47ac93);
+    color: white;
+    position: relative;
+    width: 100vw;
+    z-index: 200;
+    height: 125vh;
+    top: 1730px;
+  }
+}

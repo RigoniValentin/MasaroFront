@@ -1,0 +1,18 @@
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%; /* cambiado desde 100vw */
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%; /* cambiado desde 100vw */
+}
+
+#root {
+  min-height: 100vh;
+  width: 100%; /* cambiado desde 100vw */
+  /* ...existing global styles... */
+}
