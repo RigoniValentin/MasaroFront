@@ -130,7 +130,7 @@ const Bottom: React.FC = () => {
   const whatsappMsg =
     "¡¡ Hola !! Me gustaría obtener más información sobre sus servicios. Gracias!";
   const encodedMsg = encodeURIComponent(whatsappMsg);
-  const whatsappUrl = `https://wa.me/+5493385525639?text=${encodedMsg}`;
+  const whatsappUrl = `https://wa.me/+5493584226727?text=${encodedMsg}`;
 
   const handleArrowClick = () => {
     if (transitioning) return;
@@ -172,8 +172,11 @@ const Bottom: React.FC = () => {
     Galery8,
     Galery9,
   ];
-  // Calculamos el número total de slides (2 imágenes por slide)
-  const numSlides = Math.ceil(carouselImages.length / 2);
+  const isMobile = window.innerWidth < 973;
+  // En móviles, cada slide es 1 imagen; en pantallas grandes se agrupan de 2
+  const numSlides = isMobile
+    ? carouselImages.length
+    : Math.ceil(carouselImages.length / 2);
   const [currentSlide, setCurrentSlide] = useState(0);
   const nextSlide = () => {
     setCurrentSlide((prev) => Math.min(prev + 1, numSlides - 1));

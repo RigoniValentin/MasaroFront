@@ -728,6 +728,7 @@
   justify-content: center;
   gap: 33px;
   margin-top: 100px;
+  z-index: 200;
 }
 
 /* Updated contact cards: reduced size proportionally */
@@ -741,6 +742,7 @@
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
+  z-index: 200;
 }
 
 .contactCard:hover {
@@ -1251,7 +1253,7 @@
     position: relative;
     width: 100%;
     margin-top: 50px;
-    overflow: hidden; /* Asegura que se oculte el contenido extra */
+    overflow: visible; /* Cambio: Permite ver todas las imágenes */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1514,11 +1516,11 @@
     position: relative;
     width: 100%;
     margin-top: 20px;
-    overflow: hidden; /* Asegura que se oculte el contenido extra */
+    /* Se mantiene overflow hidden para recortar contenido excesivo */
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
   }
 
   /* Contenedor interno: mantiene las imágenes centradas */
@@ -1577,7 +1579,9 @@
     transform: rotate(180deg);
   }
 
+  /* Forzamos que cada imagen ocupe el 100% del ancho del contenedor */
   .carouselImage {
+    flex: 0 0 100%; /* Cada imagen ocupa todo el ancho */
     width: 100% !important;
     margin-right: 0 !important;
     height: auto;
@@ -1591,7 +1595,7 @@
     align-items: center;
     width: 100%;
     z-index: 200;
-    height: 50vh;
+    height: 30vh;
     top: 1400px;
     padding: 0 3.875%;
   }
@@ -1887,6 +1891,9 @@
   }
 
   /* Clients */
+  .clientsContainer {
+    height: 30vh;
+  }
   .headerBadgeClients h2 {
     left: 50vw;
     transform: translateX(-50%);
@@ -1903,6 +1910,10 @@
 }
 
 @media (max-width: 376px) {
+  .clientsContainer {
+    height: 30vh;
+  }
+
   .footer {
     position: absolute;
     justify-content: space-around;
@@ -1917,6 +1928,10 @@
   }
 }
 @media (max-width: 365px) {
+  .clientsContainer {
+    height: 30vh;
+  }
+
   .footer {
     position: absolute;
     justify-content: space-around;
