@@ -62,7 +62,7 @@ const Videos = () => {
               >
                 <img
                   src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`}
-                  alt={video.title}
+                  alt="Miniatura de video de YouTube Shorts de MASARO"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   onError={(e) => {
                     (e.target as HTMLImageElement).src = `https://img.youtube.com/vi/${video.id}/hqdefault.jpg`;
