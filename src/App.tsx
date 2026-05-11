@@ -1,28 +1,28 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import NavBar from "./components/navbar/NavBar";
-import BannerHeader from "./components/Banner/BannerHeader";
+import Hero from "./components/Hero/Hero";
 import AboutUs from "./components/AboutUs/AboutUs";
 import Equipment from "./components/Equipamiento/Equipment";
-import Bottom from "./components/Bottom/Bottom";
+import Services from "./components/Services/Services";
+import Gallery from "./components/Gallery/Gallery";
+import Videos from "./components/Videos/Videos";
+import Clients from "./components/Clients/Clients";
+import Contact from "./components/Contact/Contact";
+import Footer from "./components/Footer/Footer";
 
 const App = () => {
   return (
-    <Router>
+    <div className="min-h-screen">
       <NavBar />
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <BannerHeader />
-              <AboutUs />
-              <Equipment />
-              <Bottom />
-            </>
-          }
-        />
-      </Routes>
-    </Router>
+      <Hero />
+      <AboutUs />
+      <Equipment />
+      <Services />
+      <Gallery />
+      <Videos />
+      <Clients />
+      <Contact />
+      <Footer />
+    </div>
   );
 };
 

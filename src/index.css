@@ -4,42 +4,60 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body,
-#root {
-  margin: 0;
-  padding: 0;
-  font-family: "DM Sans", sans-serif;
-  @apply text-gray-500;
-}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
-/* Removemos overflow-x: hidden de .app para que no afecte el scroll */
-.app {
-  margin: 0;
-  padding: 0;
-}
-
-/* Nueva clase para ocultar desbordamiento horizontal sin interferir con el scroll de anclaje */
-.noHorizontalOverflow {
-  overflow-x: hidden;
-  overflow-y: visible; /* se permite el scroll vertical */
-  height: auto; /* se asegura que su altura se ajuste al contenido */
-  position: static; /* se evita que cree un contexto de scroll propio */
-}
-
-/* Global class to handle overflow issues */
-.noHorizontalOverflow {
-  overflow-x: hidden; /* Prevent horizontal overflow */
-  overflow-y: visible; /* Allow vertical scrolling */
-}
-
-@media (max-width: 973px) {
-  .fullWidthMobile {
-    width: 100vw; /* Ensure it spans the full viewport width */
-    overflow-x: hidden; /* Prevent horizontal overflow */
+  body {
+    @apply m-0 p-0 font-dmsans text-masaro-dark bg-white overflow-x-hidden;
   }
 
   #root {
-    width: 100vw;
+    @apply min-h-screen w-full overflow-x-hidden;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  ::selection {
+    @apply bg-masaro-teal/30 text-masaro-dark;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-masaro-green rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-masaro-teal;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply px-4 sm:px-8 md:px-16 lg:px-24;
+  }
+
+  .section-title {
+    @apply font-montserrat text-3xl sm:text-4xl md:text-5xl font-bold;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-masaro-gradient;
+  }
+
+  .glass-card {
+    @apply bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl;
   }
 }

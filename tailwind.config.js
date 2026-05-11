@@ -4,38 +4,50 @@ export default {
   theme: {
     extend: {
       colors: {
-        "gray-20": "#F8F4EB",
-        "gray-50": "#EFE6E6",
-        " gray-100": "#DFCCCC",
-        "gray-500": "#5E0000",
-        "primary-100": "#FFE1E0",
-        "primary-300": "#FFA6A3",
-        "primary-500": "#FF6B66",
-        "secondary-400": "#FFCD58",
-        "secondary-500": "#FFC132",
+        masaro: {
+          teal: "#4cbece",
+          green: "#46a98a",
+          "green-dark": "#3a8d73",
+          navy: "#3e4095",
+          "navy-light": "#484ba3",
+          blue: "#6aaffd",
+          dark: "#0f172a",
+          "dark-light": "#1e293b",
+          light: "#f0fdfa",
+          white: "#ffffff",
+        },
       },
-      backgroundImage: (theme) => ({
-        "gradient-yellowred":
-          "linear-gradient(90deg, #FF616A 0%, #FFC837 100%)",
-        "mobile-home": "url('./assets/HomePageGraphic.png')",
-        "gradient-opacity":
-          "linear-gradient(to bottom, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 1) 80%)",
-      }),
+      backgroundImage: {
+        "masaro-gradient": "linear-gradient(135deg, #4cbece 0%, #46a98a 100%)",
+        "masaro-gradient-dark": "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)",
+        "masaro-gradient-horizontal": "linear-gradient(90deg, #4cbece 0%, #46a98a 100%)",
+      },
       fontFamily: {
         dmsans: ["DM Sans", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],
       },
-      content: {
-        evolvetext: "url('./assets/EvolveText.png')",
-        abstractwaves: "url('./assets/AbstractWaves.png')",
-        sparkles: "url('./assets/Sparkles.png')",
-        circles: "url('./assets/Circles.png')",
+      animation: {
+        "scroll-left": "scrollLeft 30s linear infinite",
+        "fade-in": "fadeIn 0.6s ease-out forwards",
+        "pulse-slow": "pulse 3s ease-in-out infinite",
+      },
+      keyframes: {
+        scrollLeft: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
+        fadeIn: {
+          "0%": { opacity: "0", transform: "translateY(20px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
       },
     },
     screens: {
       xs: "480px",
       sm: "768px",
       md: "1060px",
+      lg: "1280px",
+      xl: "1440px",
     },
   },
   plugins: [],

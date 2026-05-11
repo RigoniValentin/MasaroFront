@@ -362,6 +362,16 @@
   margin-right: 30px;
 }
 
+/* Estilos para videos en el carousel */
+.carouselVideo {
+  width: 832px;
+  height: 578px;
+  object-fit: fill;
+  border-radius: 70px;
+  margin-right: 30px;
+  background-color: #000;
+}
+
 /* Botones del carousel posicionados de forma absoluta */
 .carouselButton {
   position: absolute;
@@ -1275,8 +1285,16 @@
     border-radius: 50px;
     margin-right: 30px;
   }
-  /*clients*/
 
+  /* Videos del carousel en pantallas medianas */
+  .carouselVideo {
+    width: 375px;
+    height: 320px;
+    object-fit: fill;
+    border-radius: 50px;
+    margin-right: 30px;
+  }
+  /*clients*/
   .clientsContainer {
     top: 1650px;
   }
@@ -1586,6 +1604,17 @@
     margin-right: 0 !important;
     height: auto;
     border-radius: 30px;
+    object-fit: fill;
+  }
+
+  /* Videos del carousel en móviles */
+  .carouselVideo {
+    flex: 0 0 100%; /* Cada video ocupa todo el ancho */
+    width: 100% !important;
+    margin-right: 0 !important;
+    height: auto;
+    border-radius: 30px;
+    object-fit: fill;
   }
 
   /* Clients */

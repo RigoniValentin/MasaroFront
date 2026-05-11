@@ -22,6 +22,7 @@ import Galery6 from "../../assets/CarrouselGalery/06.jpg";
 import Galery7 from "../../assets/CarrouselGalery/07.jpg";
 import Galery8 from "../../assets/CarrouselGalery/08.jpg";
 import Galery9 from "../../assets/CarrouselGalery/09.jpg";
+import EquipamientosVideo from "../../assets/Equipamientos.mp4";
 import Client1 from "../../assets/CarrouselClientes/01.png";
 import Client2 from "../../assets/CarrouselClientes/02.png";
 import Client3 from "../../assets/CarrouselClientes/03.png";
@@ -161,23 +162,49 @@ const Bottom: React.FC = () => {
   const displayCards =
     currentView === "primary" ? servicesPrimary : servicesAlternate;
 
-  const carouselImages = [
-    Galery1,
-    Galery2,
-    Galery3,
-    Galery4,
-    Galery5,
-    Galery6,
-    Galery7,
-    Galery8,
-    Galery9,
+  // Estructura de datos para soportar imágenes y videos
+  interface MediaItem {
+    type: "image" | "video";
+    src: string;
+    poster?: string; // Imagen que se muestra mientras carga el video
+  }
+
+  const carouselMedia: MediaItem[] = [
+    { type: "image", src: Galery1 },
+    { type: "image", src: Galery2 },
+    { type: "video", src: EquipamientosVideo, poster: Galery3 },
+    { type: "image", src: Galery4 },
+    { type: "image", src: Galery5 },
+    { type: "image", src: Galery6 },
+    { type: "image", src: Galery7 },
+    { type: "image", src: Galery8 },
+    { type: "image", src: Galery9 },
   ];
   const isMobile = window.innerWidth < 973;
-  // En móviles, cada slide es 1 imagen; en pantallas grandes se agrupan de 2
+  // En móviles, cada slide es 1 imagen/video; en pantallas grandes se agrupan de 2
   const numSlides = isMobile
-    ? carouselImages.length
-    : Math.ceil(carouselImages.length / 2);
+    ? carouselMedia.length
+    : Math.ceil(carouselMedia.length / 2);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const videoRefs = React.useRef<(HTMLVideoElement | null)[]>([]);
+
+  // Función para controlar la reproducción de videos según el slide actual
+  React.useEffect(() => {
+    videoRefs.current.forEach((video, index) => {
+      if (video) {
+        if (index === currentSlide) {
+          // Reproducir el video si está visible
+          video.play().catch(() => {
+            // Silenciar error si el navegador bloquea autoplay
+          });
+        } else {
+          // Pausar el video si no está visible
+          video.pause();
+        }
+      }
+    });
+  }, [currentSlide]);
+
   const nextSlide = () => {
     setCurrentSlide((prev) => Math.min(prev + 1, numSlides - 1));
   };
@@ -315,13 +342,27 @@ const Bottom: React.FC = () => {
             // Se traslada en porcentaje: cada slide equivale al 100% del contenedor
             style={{ transform: `translateX(-${currentSlide * 100}%)` }}
           >
-            {carouselImages.map((img, index) => (
-              <img
-                key={index}
-                src={img}
-                alt={`carousel-${index}`}
-                className={styles.carouselImage}
-              />
+            {carouselMedia.map((media, index) => (
+              <React.Fragment key={index}>
+                {media.type === "image" ? (
+                  <img
+                    src={media.src}
+                    alt={`carousel-${index}`}
+                    className={styles.carouselImage}
+                  />
+                ) : (
+                  <video
+                    ref={(el) => (videoRefs.current[index] = el)}
+                    src={media.src}
+                    poster={media.poster}
+                    className={styles.carouselVideo}
+                    loop
+                    muted
+                    playsInline
+                    controls={false}
+                  />
+                )}
+              </React.Fragment>
             ))}
           </div>
           <button
