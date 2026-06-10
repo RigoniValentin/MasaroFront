@@ -3,18 +3,24 @@ import { motion } from "framer-motion";
 import { Play, X } from "lucide-react";
 import YouTube from "react-youtube";
 
+type VideoOrientation = "horizontal" | "vertical";
+
 const videos = [
-  { id: "VOa5Bhrq8M8", orientation: "horizontal" as const },
-  { id: "FJY5pV8jJ34" },
-  { id: "aZmpU2cz5BI" },
-  { id: "6oREIVNqKtw" },
-  { id: "JciGnQtSvtQ" },
-  { id: "yqtMv535EFg" },
-  { id: "f-Yi_1bjqpQ" },
+  { id: "VOa5Bhrq8M8", orientation: "horizontal" as VideoOrientation },
+  { id: "FJY5pV8jJ34", orientation: "vertical" as VideoOrientation },
+  { id: "aZmpU2cz5BI", orientation: "vertical" as VideoOrientation },
+  { id: "6oREIVNqKtw", orientation: "vertical" as VideoOrientation },
+  { id: "JciGnQtSvtQ", orientation: "vertical" as VideoOrientation },
+  { id: "yqtMv535EFg", orientation: "vertical" as VideoOrientation },
+  { id: "f-Yi_1bjqpQ", orientation: "vertical" as VideoOrientation },
 ];
 
 const Videos = () => {
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
+  const horizontalVideos = videos.filter((video) => video.orientation === "horizontal");
+  const verticalVideos = videos.filter((video) => video.orientation === "vertical");
+
+  const activeVideoData = videos.find((video) => video.id === activeVideo);
 
   return (
     <section
@@ -45,9 +51,78 @@ const Videos = () => {
           </p>
         </motion.div>
 
-        {/* Video Cards */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-          {videos.map((video, index) => (
+        {/* Horizontal Videos */}
+        <div className="mb-14">
+          <div className="flex items-end justify-between gap-4 mb-5">
+            <div>
+              <span className="inline-flex items-center rounded-full bg-masaro-teal/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-masaro-teal mb-3">
+                Horizontales destacados
+              </span>
+              <h3 className="text-2xl sm:text-3xl font-semibold text-masaro-dark">
+                Videos horizontales
+              </h3>
+            </div>
+            <p className="hidden sm:block text-sm text-gray-500 max-w-md text-right">
+              Más espacio, mejor lectura y una vista previa completa del contenido.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+            {horizontalVideos.map((video, index) => (
+              <motion.div
+                key={video.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{ duration: 0.5, delay: index * 0.12 }}
+                className="group relative rounded-3xl overflow-hidden bg-white shadow-xl shadow-gray-200/70 border border-gray-100 hover:border-masaro-teal/30 hover:shadow-masaro-teal/15 transition-all duration-500 lg:col-span-2"
+              >
+                <div
+                  className="relative aspect-video cursor-pointer overflow-hidden bg-slate-950/5"
+                  onClick={() => setActiveVideo(video.id)}
+                >
+                  <div className="absolute inset-0 bg-gradient-to-tr from-black/10 via-transparent to-white/10" />
+                  <img
+                    src={`https://img.youtube.com/vi/${video.id}/hqdefault.jpg`}
+                    alt="Miniatura de video horizontal de MASARO"
+                    className="w-full h-full object-contain bg-black/5 group-hover:scale-[1.02] transition-transform duration-700"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).src = `https://img.youtube.com/vi/${video.id}/mqdefault.jpg`;
+                    }}
+                  />
+                  <div className="absolute inset-0 bg-black/15 group-hover:bg-black/5 transition-all duration-500 flex items-center justify-center">
+                    <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-masaro-teal/90 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-masaro-teal/30 ring-8 ring-white/10">
+                      <Play className="w-8 h-8 text-white ml-1" fill="white" />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="absolute left-4 top-4 rounded-full bg-black/55 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur-sm">
+                  Horizontal
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* Vertical Videos */}
+        <div>
+          <div className="flex items-end justify-between gap-4 mb-5">
+            <div>
+              <span className="inline-flex items-center rounded-full bg-masaro-green/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-masaro-green mb-3">
+                Verticales
+              </span>
+              <h3 className="text-2xl sm:text-3xl font-semibold text-masaro-dark">
+                Videos verticales
+              </h3>
+            </div>
+            <p className="hidden sm:block text-sm text-gray-500 max-w-md text-right">
+              El formato corto que ya venías usando para mostrar trabajos rápidos y dinámicos.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+            {verticalVideos.map((video, index) => (
             <motion.div
               key={video.id}
               initial={{ opacity: 0, y: 30 }}
@@ -58,21 +133,15 @@ const Videos = () => {
             >
               {/* Thumbnail */}
               <div
-                className={`relative cursor-pointer overflow-hidden ${
-                  video.orientation === "horizontal" ? "aspect-video" : "aspect-[9/16]"
-                }`}
+                className="relative aspect-[9/16] cursor-pointer overflow-hidden"
                 onClick={() => setActiveVideo(video.id)}
               >
                 <img
-                  src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`}
-                  alt={
-                    video.orientation === "horizontal"
-                      ? "Miniatura de video horizontal de MASARO"
-                      : "Miniatura de video de YouTube Shorts de MASARO"
-                  }
+                  src={`https://img.youtube.com/vi/${video.id}/hqdefault.jpg`}
+                  alt="Miniatura de video de YouTube Shorts de MASARO"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   onError={(e) => {
-                    (e.target as HTMLImageElement).src = `https://img.youtube.com/vi/${video.id}/hqdefault.jpg`;
+                    (e.target as HTMLImageElement).src = `https://img.youtube.com/vi/${video.id}/mqdefault.jpg`;
                   }}
                 />
                 <div className="absolute inset-0 bg-black/30 group-hover:bg-black/15 transition-all duration-500 flex items-center justify-center">
@@ -81,10 +150,9 @@ const Videos = () => {
                   </div>
                 </div>
               </div>
-
-
             </motion.div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
 
@@ -108,7 +176,7 @@ const Videos = () => {
             animate={{ scale: 1, opacity: 1 }}
             transition={{ type: "spring", damping: 25 }}
             className={`w-full rounded-2xl overflow-hidden ${
-              videos.find((video) => video.id === activeVideo)?.orientation === "horizontal"
+              activeVideoData?.orientation === "horizontal"
                 ? "max-w-4xl aspect-video"
                 : "max-w-sm aspect-[9/16]"
             }`}
