@@ -4,6 +4,7 @@ import { Play, X } from "lucide-react";
 import YouTube from "react-youtube";
 
 const videos = [
+  { id: "VOa5Bhrq8M8", orientation: "horizontal" as const },
   { id: "FJY5pV8jJ34" },
   { id: "aZmpU2cz5BI" },
   { id: "6oREIVNqKtw" },
@@ -57,12 +58,18 @@ const Videos = () => {
             >
               {/* Thumbnail */}
               <div
-                className="relative aspect-[9/16] cursor-pointer overflow-hidden"
+                className={`relative cursor-pointer overflow-hidden ${
+                  video.orientation === "horizontal" ? "aspect-video" : "aspect-[9/16]"
+                }`}
                 onClick={() => setActiveVideo(video.id)}
               >
                 <img
                   src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`}
-                  alt="Miniatura de video de YouTube Shorts de MASARO"
+                  alt={
+                    video.orientation === "horizontal"
+                      ? "Miniatura de video horizontal de MASARO"
+                      : "Miniatura de video de YouTube Shorts de MASARO"
+                  }
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   onError={(e) => {
                     (e.target as HTMLImageElement).src = `https://img.youtube.com/vi/${video.id}/hqdefault.jpg`;
@@ -100,7 +107,11 @@ const Videos = () => {
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ type: "spring", damping: 25 }}
-            className="w-full max-w-sm aspect-[9/16] rounded-2xl overflow-hidden"
+            className={`w-full rounded-2xl overflow-hidden ${
+              videos.find((video) => video.id === activeVideo)?.orientation === "horizontal"
+                ? "max-w-4xl aspect-video"
+                : "max-w-sm aspect-[9/16]"
+            }`}
             onClick={(e) => e.stopPropagation()}
           >
             <YouTube
