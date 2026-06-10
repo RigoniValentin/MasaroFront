@@ -62,9 +62,6 @@ const Videos = () => {
                 Videos horizontales
               </h3>
             </div>
-            <p className="hidden sm:block text-sm text-gray-500 max-w-md text-right">
-              Más espacio, mejor lectura y una vista previa completa del contenido.
-            </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
@@ -85,7 +82,7 @@ const Videos = () => {
                   <img
                     src={`https://img.youtube.com/vi/${video.id}/hqdefault.jpg`}
                     alt="Miniatura de video horizontal de MASARO"
-                    className="w-full h-full object-contain bg-black/5 group-hover:scale-[1.02] transition-transform duration-700"
+                    className="w-full h-full object-cover bg-black/5 group-hover:scale-[1.02] transition-transform duration-700"
                     onError={(e) => {
                       (e.target as HTMLImageElement).src = `https://img.youtube.com/vi/${video.id}/mqdefault.jpg`;
                     }}
@@ -116,9 +113,6 @@ const Videos = () => {
                 Videos verticales
               </h3>
             </div>
-            <p className="hidden sm:block text-sm text-gray-500 max-w-md text-right">
-              El formato corto que ya venías usando para mostrar trabajos rápidos y dinámicos.
-            </p>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
